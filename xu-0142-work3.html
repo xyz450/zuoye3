@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>城市诗歌朗诵夜 · Poetry Reading Night</title>
+<style>
+/* ---------- 页面底色与整体排版 ---------- */
+body {
+  margin: 0;
+  padding: 40px 16px;
+  background-color: #efe7d8;
+  background-image: linear-gradient(180deg, #f8f2e4 0%, #e7dcc6 100%);
+  text-align: center;
+  font-family: "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", sans-serif;
+  font-size: 16px;
+  line-height: 1.95;
+  color: #3d2a18;
+}
+
+/* ---------- 作业要求的 .page 样式（只改了 background-color） ---------- */
+.page {
+  display: inline-block;
+  background-color: #FFF6D9;
+  box-shadow: 0 0 30px rgba(80, 58, 35, 0.25);
+  text-align: left;
+  max-width: 720px;
+}
+
+/* 五个区域统一的内边距 */
+.page > div {
+  padding-left: 44px;
+  padding-right: 44px;
+}
+
+/* ---------- ① 顶部标题区 ---------- */
+.header {
+  padding-top: 46px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid rgba(120, 90, 55, 0.2);
+}
+
+.tagline {
+  margin-top: 8px;
+  font-size: 0.94em;
+  letter-spacing: 1px;
+  color: #7d6244;
+}
+
+/* ---------- ② 活动介绍区 ---------- */
+.section {
+  padding-top: 28px;
+}
+
+p {
+  margin: 0 0 15px;
+}
+
+/* ---------- ③ 报名表格区 ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 4px;
+  font-size: 0.94em;
+  background-color: #fffdf6;
+  box-shadow: 0 2px 10px rgba(80, 58, 35, 0.08);
+}
+
+th,
+td {
+  border: 1px solid rgba(120, 90, 55, 0.3);
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+th {
+  background-color: #f3e2b3;
+  color: #4a2f18;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+table tr:nth-child(even) td {
+  background-color: #fdf4dc;
+}
+
+table tr:hover td {
+  background-color: #fff0bf;
+}
+
+/* ---------- ④ 页面链接区 ---------- */
+.links {
+  padding-top: 30px;
+  padding-bottom: 6px;
+}
+
+.links a {
+  display: inline-block;
+  margin: 0 14px 10px 0;
+  padding: 7px 16px;
+  border: 1px solid rgba(120, 90, 55, 0.3);
+  background-color: #fffdf6;
+}
+
+/* ---------- ⑤ 底部公告区 ---------- */
+.notice {
+  margin-top: 30px;
+  padding: 26px 44px 36px;
+  background-color: rgba(255, 255, 255, 0.55);
+  border-top: 3px double rgba(120, 90, 55, 0.35);
+}
+
+.notice p {
+  margin: 0 0 12px;
+  font-size: 0.92em;
+  color: #6b5033;
+}
+
+/* ---------- 6-③ 并集选择器：所有标题 ---------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Georgia", "Songti SC", "SimSun", serif;
+  color: #4a2f18;
+  line-height: 1.55;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2em;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: 1.35em;
+  margin-bottom: 14px;
+}
+
+h3 {
+  font-size: 1.14em;
+  margin-bottom: 12px;
+}
+
+h2,
+h3 {
+  padding-left: 12px;
+  border-left: 5px solid #c9a227;
+}
+
+/* ---------- 6-④ ID 选择器：重要提示需强调 ---------- */
+p#intro {
+  margin-top: 20px;
+  padding: 14px 18px;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #b3261e;
+  background-color: #ffeecc;
+  border-left: 5px solid #b3261e;
+}
+
+/* ---------- 6-② 链接伪类 ---------- */
+a:link {
+  color: #7a4b23;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #8c6b53;
+}
+
+a:hover {
+  color: #c0392b;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #8e1b12;
+}
+
+/* ---------- 6-⑤ 带类名的链接 ---------- */
+a.red {
+  color: #c0392b;
+  font-weight: bold;
+}
+
+a.blue {
+  color: #1f5fa8;
+  font-weight: bold;
+}
+
+a.red:hover {
+  color: #8e1b12;
+}
+
+a.blue:hover {
+  color: #12406f;
+}
+
+/* ---------- 6-① 后代选择器：只有 div 里的 table 里的链接才生效 ---------- */
+div table a {
+  font-weight: bold;
+  border-bottom: 1px dashed #c9a227;
+}
+
+/* ---------- 6-⑥ 伪元素 ---------- */
+p::first-letter {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #b3261e;
+}
+
+div::first-line {
+  letter-spacing: 0.5px;
+  color: #3a2412;
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ① 顶部标题区 -->
+  <div class="header">
+    <h1>城市诗歌朗诵夜 · Poetry Reading Night</h1>
+    <div class="tagline">灯火可亲，诗行可读 —— 把你所在的城市，念给陌生人听</div>
+  </div>
+
+  <!-- ② 活动介绍区 -->
+  <div class="section">
+    <h2 id="intro">活动介绍</h2>
+    <p>城市诗歌朗诵夜由城市诗歌社与城市书房共同发起，每周五晚在书房三层的露台举行。我们相信诗句不必宏大，它可以只是晚归时的一次抬头，一段地铁里的沉默，或者某个路口忽然亮起的灯。</p>
+    <p>本次朗诵分三个段落展开：城市·陌生人、城市·归途、城市·光。每段之间留出十分钟自由交流时间，你可以端着热茶在露台边听完一整首诗，也可以只是安静地站着。古人写“海上生明月，天涯共此时”，句子写得极远，念出来却离人很近。</p>
+    <p>现场不设评委，也不排名次。你可以带一首自己写的，也可以带一首别人的；可以从诗集里抄一页，也可以只用手机记下三行。我们想听到的是你念诗时的声音，而不是标准答案。</p>
+    <p id="intro">重要提示：本次朗诵夜限 24 席，提交报名后以短信确认为准；请提前 15 分钟入场，会场内请勿使用闪光灯拍照，谢绝携带外放音响与宠物入场。</p>
+  </div>
+
+  <!-- ③ 活动报名信息表格区 -->
+  <div class="section">
+    <h3>活动报名信息</h3>
+    <table>
+      <tr>
+        <th>编号</th>
+        <th>姓名</th>
+        <th>朗诵篇目</th>
+        <th>报名状态</th>
+      </tr>
+      <tr>
+        <td>01</td>
+        <td><a href="https://example.com/poet-suwan">苏晚</a></td>
+        <td>《再别康桥》</td>
+        <td>已确认席位</td>
+      </tr>
+      <tr>
+        <td>02</td>
+        <td><a href="https://example.com/poet-chenxubai">陈叙白</a></td>
+        <td>《雨巷》</td>
+        <td>已确认席位</td>
+      </tr>
+      <tr>
+        <td>03</td>
+        <td>周牧</td>
+        <td>《致橡树》</td>
+        <td>待确认</td>
+      </tr>
+      <tr>
+        <td>04</td>
+        <td>许星野</td>
+        <td>《乡愁》</td>
+        <td>候补名单</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- ④ 页面链接区 -->
+  <div class="section links">
+    <div>
+      <a class="red" href="https://hongchenwusdnu.github.io/bookstore/job4.html">查看往期活动照片</a>
+      <a class="blue" href="https://xyz450.github.io/zuoye3/job3.html">在线咨询活动详情</a>
+    </div>
+  </div>
+
+  <!-- ⑤ 底部公告区 -->
+  <div class="notice">
+    <p>活动时间：本周五 19:00 — 21:00<br>活动地点：城市书房三层露台（地铁 2 号线“图书城站”B 口出，步行三分钟）</p>
+    <p>现场提供热茶与薄毯，夜间风大，请自备外套<br>如需上台朗读，请自备纸质诗稿；现场另备诗集三十册，可自由取阅</p>
+    <p>报名成功后请按时到场，如无法参加请提前一天告知<br>本活动为公益性质，不收取任何费用，欢迎带上你的朋友一起来</p>
+  </div>
+
+</div>
+</body>
+</html>
